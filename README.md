@@ -19,7 +19,3 @@ Expand org.learn.test and right click the desired class and run as Java applicat
 ## Built With
 
 maven, Spring Tool suite
-<<<<<<< HEAD
-
-=======
->>>>>>> db6d47252fad77f87781aae82c577b0a5cb10aed

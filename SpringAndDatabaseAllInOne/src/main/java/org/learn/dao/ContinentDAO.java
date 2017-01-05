@@ -28,6 +28,7 @@ public class ContinentDAO {
 		jdbcTemplate = new NamedParameterJdbcTemplate(dataSource);
 	}
 
+	//===== Query 
 	public List<Continent> getAllContinents() {
 
 		return jdbcTemplate.query("select * from continent", new RowMapper<Continent>() {
@@ -110,7 +111,7 @@ public class ContinentDAO {
 
 	}
 	
-	@Transactional
+	@Transactional() //== Please play with different parameters
 	public int[] createBatchWithTransaction(List<Continent> continents) {
 
 		SqlParameterSource[] createBatchParameterSource = SqlParameterSourceUtils.createBatch(continents.toArray());

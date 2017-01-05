@@ -1,5 +1,0 @@
-What tools and technologies we are using :
-
-mysql = for Db
-commons DBCP =  apachec Ddtabase connection polling.
-

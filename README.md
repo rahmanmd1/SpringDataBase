@@ -4,11 +4,12 @@ Basic database CRUD example with Transaction
 
 ## Getting Started
 
-Clone and Import the maven project in your worskSpace.
+####Clone and Import the maven project in your worskSpace.
+####Run the SQL script : DBScript.sql
 
 ### Prerequisites
 
-Java, Spring core and basic database concept.
+Java, Spring core, Apache DBCP ( Database Pooling)  and basic database concept.
 
 ## Running the tests
 

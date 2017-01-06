@@ -25,6 +25,12 @@ public class ContinentDAOTest {
 			for (Continent continent : continents) {
 				System.out.println("ID : " + continent.getId() + " Name : " + continent.getName());
 			}
+			
+			System.out.println("======  Query Continents :  Like operator example ============");
+			List<Continent> continentsV1 = continentDAO.getAllContinentsV1();
+			for (Continent continent : continentsV1) {
+				System.out.println("ID : " + continent.getId() + " Name : " + continent.getName());
+			}
 
 			System.out.println("======  Query for single continent =========");
 			Continent continent = continentDAO.getContinent(2);

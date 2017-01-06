@@ -2,7 +2,9 @@ package org.learn.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import javax.sql.DataSource;
 
@@ -47,6 +49,28 @@ public class ContinentDAO {
 		);
 
 	}
+	
+	/***
+	 * 
+	 * Get list of Continent based on LIKE operator
+	 * 
+	 * @return
+	 */
+	public List<Continent> getAllContinentsV1() {
+
+		List<Continent> continents = new ArrayList<>();
+		
+		MapSqlParameterSource parameters = new MapSqlParameterSource();
+		parameters.addValue("name", "%Amer%");
+		List<Map<String, Object>> queryForList = jdbcTemplate.queryForList("select * from continent where name like :name", parameters);
+
+		for( Map<String, Object> map :queryForList){
+			Continent continent = new Continent((Integer)map.get("id"),map.get("name").toString());
+			continents.add(continent);
+		}
+		return continents;
+	}
+
 
 	/***
 	 * 

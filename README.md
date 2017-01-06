@@ -4,8 +4,8 @@ Basic database CRUD example with Transaction
 
 ## Getting Started
 
-####Clone and Import the maven project in your worskSpace.
-####Run the SQL script : DBScript.sql
+Clone and Import the maven project in your worskSpace.
+Run the SQL script : DBScript.sql
 
 ### Prerequisites
 
